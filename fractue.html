@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+    <title>
+        FRACTURE
+    </title>
+    <style>
+        body
+        {
+            background-image:url('download.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height:100vh;
+            width:auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 30px;
+            font-size: 15px;
+            padding: 8px;
+            border-radius: 5px;
+
+        }
+        .round-box {
+            width: 100px;
+            height: 100px;
+            background-color: #dbb134;
+            border-radius: 50%;
+}
+footer {
+      background-color: rgb(43,174,226);
+      color:rgb(0, 0, 0);
+      padding: 1px;
+      text-align: center;
+    }
+
+       
+    </style>
+    </head>
+    <body style="background-color: rgb(43, 174, 226);">
+       <h1><center><b><i><U><marquee width="100%" direction="right" height="50px" bgcolor="orange">PREDICT FRACTURE OR NOT</marquee></h1></U></i></b></center>
+        <form method="POST">
+            {% csrf_token %}
+            <center>
+            <table>
+                <tr>
+                    <td>ID:</td>
+                    <td>
+                        <input type="text" name="textpclass">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>AGE:</td>
+                    <td>
+                        <input type="text" name="textage">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>SEX(1--Male and 0--female):</td>
+                    <td>
+                        <input type="text" name="textsex">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>WEIGHT:</td>
+                    <td>
+                        <input type="text" name="textweight">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>HEIGHT:</td>
+                    <td>
+                        <input type="text" name="textheight">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>MEDICATION( 1--Anticonvulsant 2--No medication 3--Glucocorticoids):</td>
+                    <td>
+                        <input type="text" name="textmedication">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>WAITING TIME:</td>
+                    <td>
+                        <input type="text" name="textwaiting">
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>BMD:</td>
+                    <td>
+                        <input type="text" name="textbmd">
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                    <br><br><center><button type="SUBMIT" class="btn btn-primary" name="buttonpredict"><h3>Predict</h3></button></center>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <br><br><center><b><h1>{{result}}</h1></b></center>
+                    </td>
+                   
+                </tr>
+            </table>
+            </center>
+            <br><br><br>
+            <footer>
+                <p>&copy;Sakshi Sangamesh Badami||1HK21CS138||@Karanadu Technologies||HKBK College Of Engineering</p>
+              </footer>
+        </form>
+    </body>
+    </html>
+
