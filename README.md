@@ -1,3 +1,2 @@
-This is a Machine Learning Poject
-Project is Done by Using Navie Baye's Algorithm
-Used Django and Python
+In this project we have used Navie Bayes algorithm 
+And Django in the frontend
